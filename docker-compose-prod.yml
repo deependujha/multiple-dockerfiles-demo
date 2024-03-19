@@ -1,0 +1,16 @@
+services:
+  my_app_1:
+    build:
+      context: ./app_1
+      dockerfile: docker/Dockerfile.prod
+    ports:
+      - "6969:80"
+
+  
+  my_app_2:
+    build:
+      context: ./app_2
+      dockerfile: docker/Dockerfile.prod
+    ports:
+      - "7979:80"
+

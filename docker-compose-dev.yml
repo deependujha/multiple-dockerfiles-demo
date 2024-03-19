@@ -1,0 +1,18 @@
+services:
+  my_app_1:
+    build:
+      context: ./app_1
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - "6969:80"
+    volumes:
+      - ./app_1:/code
+  
+  my_app_2:
+    build:
+      context: ./app_2
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - "7979:80"
+    volumes:
+      - ./app_2:/code
